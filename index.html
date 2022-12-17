@@ -14566,6 +14566,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="One-Big-European-League">One Big European League<a class="anchor-link" href="#One-Big-European-League">&#182;</a></h1><p>by Henry Herrera</p>
+
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Lets predict if the top 5 leagues in European soccer played in one league all together who would win. Since all the top leagues in Europe have paused for the world cup, it seemed interesting to see if there was a world cup style season but with clubs from the top european leagues. The season would be similar to what a regular season is. So the winner would be whoever comes in first place. To predict the winner we will be using last seasons stats from all the top European leagues. We also be using this seasons stats.</p>
 
 </div>
 </div>
@@ -14574,7 +14583,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[757]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[780]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -14596,15 +14605,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="One-Big-European-League">One Big European League<a class="anchor-link" href="#One-Big-European-League">&#182;</a></h1>
+<p>For this project we will be usng:
+    Pandas
+    Numby
+    Pyplot
+    Seasborn
+    SKlearn</p>
+
 </div>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Lets predict if the top 5 leagues in European soccer played in one league all together who would win using information from this season. Since all the top leagues of paused for the world cup, it seems interesting to see if there was a world cup style season but with clubs from the top european leagues.</p>
-
+<h1 id="Data-Collection/Representation">Data Collection/Representation<a class="anchor-link" href="#Data-Collection/Representation">&#182;</a></h1>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14612,7 +14626,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[545]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[781]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">team_stats_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;2021-2022 Football Team Stats.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-1&quot;</span><span class="p">)</span>
@@ -14624,12 +14638,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Starting off we load our datasets that we will be using in our analysis.
+Note these datasets are based on the 2021-2022 season. The team_stats_df dataset represent the team stats. The second dataset represents the players stats.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[546]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[782]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">team_stats_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -14650,7 +14673,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[546]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[782]:</div>
 
 
 
@@ -14942,7 +14965,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[547]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[783]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">team_stats_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Pts/G&#39;</span><span class="p">,</span><span class="s1">&#39;xG&#39;</span><span class="p">,</span><span class="s1">&#39;xGA&#39;</span><span class="p">,</span><span class="s1">&#39;xGD&#39;</span><span class="p">,</span><span class="s1">&#39;xGD/90&#39;</span><span class="p">,</span><span class="s1">&#39;Attendance&#39;</span><span class="p">,</span><span class="s1">&#39;Top Team Scorer&#39;</span><span class="p">,</span> <span class="s1">&#39;Goalkeeper&#39;</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -14964,7 +14987,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[547]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[783]:</div>
 
 
 
@@ -15167,6 +15190,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We are dropping columns that we will not use in the team_stats_df. We we will use in this dataset is: <br>
+    &nbsp; Rk: Rank <br>
+    &nbsp; Squad: Team Name <br>
+    &nbsp; Country: Teams Country Origin <br>
+    &nbsp; LgRk: Rank in thier respective league <br>
+    &nbsp; MP: Matches played <br>
+    &nbsp; W: Wins <br>
+    &nbsp; D: Draws <br>
+    &nbsp; L: Lose <br>
+    &nbsp; GF: Goals Forced aka scored <br>
+    &nbsp; GA: Goals Allowed aka conceded <br>
+    &nbsp; GD: Goal Differential (GF - GD) <br>
+    &nbsp; Pts: Points <br>
+Data set can be found <a href = 'https://www.kaggle.com/datasets/vivovinco/20212022-football-team-stats'>here</a></p>
 
 </div>
 </div>
@@ -15175,7 +15212,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[548]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[784]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">player_stats_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -15196,7 +15233,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[548]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[784]:</div>
 
 
 
@@ -15500,7 +15537,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[549]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[785]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">player_stats_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -15521,7 +15558,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[549]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[785]:</div>
 
 
 
@@ -15536,12 +15573,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Note the player stats dataset has a lot of columns. We are not going to use all of them.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[550]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[786]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">player_complete_stats_df</span> <span class="o">=</span> <span class="n">player_stats_df</span><span class="p">[[</span><span class="s1">&#39;Squad&#39;</span><span class="p">,</span> <span class="s1">&#39;Goals&#39;</span><span class="p">,</span><span class="s1">&#39;Min&#39;</span><span class="p">,</span> <span class="s1">&#39;Shots&#39;</span><span class="p">,</span> <span class="s1">&#39;SoT&#39;</span><span class="p">,</span><span class="s1">&#39;PasTotCmp&#39;</span><span class="p">,</span><span class="s1">&#39;PasTotAtt&#39;</span><span class="p">,</span><span class="s1">&#39;Assists&#39;</span><span class="p">,</span><span class="s1">&#39;PasAss&#39;</span><span class="p">,</span><span class="s1">&#39;SCA&#39;</span><span class="p">,</span><span class="s1">&#39;GCA&#39;</span><span class="p">,</span><span class="s1">&#39;DriSucc&#39;</span><span class="p">,</span><span class="s1">&#39;DriAtt&#39;</span><span class="p">]]</span> 
@@ -15563,7 +15608,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[550]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[786]:</div>
 
 
 
@@ -15773,12 +15818,34 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Again we drop columns that will not be in use for the players stats.
+What is left in the data set is: <br>
+    &nbsp; Goals: Goals Per 90 min<br>
+    &nbsp; Min: Minutes played<br>
+    &nbsp; Shot: Shots Per 90 min<br>
+    &nbsp; SoT: Shots on Target per 90 min<br>
+    &nbsp; PasTotCmp: Pass Total Completions Per 90 min<br>
+    &nbsp; PasTotATT: Pass Total Attempts Per 90 min<br>
+    &nbsp;  Assists: Assists per 90 min<br>
+    &nbsp; PasAss: Pass leading to assists total per 90min<br>
+    &nbsp; SCA: Shot creating action per 90<br>
+    &nbsp; GCA: Goal creating Action per 90<br>
+    &nbsp; DriSucc: Dribbling Success per 90 <br>
+    &nbsp; DriAtt: Dribble Attempts per 90<br>
+Dataset can be found <a href = https://www.kaggle.com/datasets/vivovinco/20212022-football-player-statshere> here </a></p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[551]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[787]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">d</span> <span class="ow">in</span> <span class="n">player_stats_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
@@ -15810,7 +15877,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[551]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[787]:</div>
 
 
 
@@ -16020,15 +16087,74 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Earlier it was mentioned that the player stats dataset had stats that were based on the per 90 ratio. Its not gonna be explain much here, but more details about the per 90 ration can be found <a href = https://www.coachtechsoccer.com/wp-content/uploads/2021/04/Best-Practice-Task-CoachTech-Opposition-Analysis-Data-Course.pdf>here</a>. So to find the actual stat totals for each player we do, (x * MinutesPlayed) / 90, where x is the per90 ratio for the stat you wanna find. After thats done you see each player now has a resonable stat total for the season.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[552]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[788]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player_complete_stats_df</span><span class="p">[</span><span class="s1">&#39;Goals&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[788]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>35.0</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Note if you see the max goals scored by a player for all the leagues has 35. Which was done by Robert Lewandowski, who plays in the Bundesliga (German League) for Bayern Muncich last season.</p>
+
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[791]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">players_team_total_stats_df</span> <span class="o">=</span> <span class="n">player_complete_stats_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Squad&#39;</span><span class="p">,</span><span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">team_stats_df</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">players_team_total_stats_df</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
 <span class="n">players_team_total_stats_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
@@ -16047,7 +16173,45 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[552]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Rk         98
+Squad      98
+Country    98
+LgRk       98
+MP         98
+W          98
+D          98
+L          98
+GF         98
+GA         98
+GD         98
+Pts        98
+dtype: int64
+Squad        98
+Goals        98
+Min          98
+Shots        98
+SoT          98
+PasTotCmp    98
+PasTotAtt    98
+Assists      98
+PasAss       98
+SCA          98
+GCA          98
+DriSucc      98
+DriAtt       98
+dtype: int64
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[791]:</div>
 
 
 
@@ -16257,6 +16421,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Now because this dataset showed individual stats, its no use to us in its current form. So we modify that set to be grouped by Squad name. Then we add up all of the stats together based on the Squad name. Thus we now have a complete tally of a teams stats. And now we have the same number of rows as the team_stats dataset.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16464,12 +16636,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Now since we have the same number of rows, we can perform a merge of both datasets.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[712]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[793]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">teams_df</span> <span class="o">=</span> <span class="n">teams_df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">PassPerc</span> <span class="o">=</span> <span class="n">teams_df</span><span class="p">[</span><span class="s1">&#39;PasTotCmp&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">teams_df</span><span class="p">[</span><span class="s1">&#39;PasTotAtt&#39;</span><span class="p">])</span>
@@ -16496,7 +16676,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[712]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[793]:</div>
 
 
 
@@ -16819,6 +16999,29 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We then calculated success percentages for Pass Completions, Dribbling Successes, Wins, Goals scored per games, and assists per game.</p>
+
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Now we want to find some trends in the data. Because we are trying to predict who wins the league. Then lets look at we inscreases the chances of winning.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16879,6 +17082,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Lets start by finding if Rank and Winning Percenatage. As we can see their is a negative corrolation between these two variables. The lower the rank the lower the winning percentage is.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16943,6 +17154,74 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The logic for the previous graph also applies to this one. Only thing is this time we are dealing with league rank.</p>
+
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[794]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;GoalsPG&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;WinPerc&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">teams_df</span><span class="p">)</span>
+<span class="n">m</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">teams_df</span><span class="p">[</span><span class="s1">&#39;GoalsPG&#39;</span><span class="p">],</span> <span class="n">teams_df</span><span class="p">[</span><span class="s1">&#39;WinPerc&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">teams_df</span><span class="p">[</span><span class="s1">&#39;GoalsPG&#39;</span><span class="p">],</span> <span class="n">m</span><span class="o">*</span><span class="n">teams_df</span><span class="p">[</span><span class="s1">&#39;GoalsPG&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">b</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[794]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f0843204820&gt;]</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Looking at Goals per game and winning percetange, we can see there is a positive correltation. This also makes sense because the more goals a team scores the better the chance they will win.</p>
 
 </div>
 </div>
@@ -17176,6 +17455,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Lets try to find similar trends if we find mean gouped by the league rank.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17235,6 +17522,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Remember GD (Goal Differential) is just Goals Made minus Goals Conceded. So This is really a good indicator that a team wins more often. Notice the graph as a postive correlation. Again the higher the GD the higher winning percentage.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17294,6 +17589,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Assists also play a part in winning percentage.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17353,6 +17656,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We should also look into passing stats. Of course the majority of the game is passing. How can one score if teams don't pass the ball enough. Based on the graph there is a correltation between passing and winning.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17648,6 +17959,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Hypothesis-Testing">Hypothesis Testing<a class="anchor-link" href="#Hypothesis-Testing">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Now that we have an idea what increases a teams chance of winning lets do a hypthesis test.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -18006,15 +18332,23 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Before we do any hypothesis testing we want to predict this leagues winner with using the stats from the current season. So we perfrom the same modifcations that was done from the other datasets, with these two new datas. These dataset will have stats from the 2022-2023 season. The dataset can be found <a href=https://www.kaggle.com/datasets/vivovinco/20222023-football-player-stats>here</a> and <a href=https://www.kaggle.com/datasets/vivovinco/20222023-football-team-stats>here</a></p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[769]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[809]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;WinPerc&#39;</span><span class="p">,</span> <span class="s1">&#39;GoalsPG&#39;</span><span class="p">,</span> <span class="s1">&#39;AssistsPG&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GoalsPG&#39;</span><span class="p">,</span> <span class="s1">&#39;AssistsPG&#39;</span><span class="p">,</span><span class="s1">&#39;PassPerc&#39;</span><span class="p">]</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">teams_df</span><span class="p">[</span><span class="n">x_columns</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">teams_df</span><span class="o">.</span><span class="n">Rk</span>
 
@@ -18039,7 +18373,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[769]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[809]:</div>
 
 
 
@@ -18054,12 +18388,20 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We will use a decision tree to classify a possible winner. A tutorial on how to implement the decision tree can be found <a href=https://www.datacamp.com/tutorial/decision-tree-classification-python>here</a>. The depended variables that will be used are GoalsPG, AssistsPG, and PassPerc. And since we want to find a winner, the rank will be the inpendent variable. You can see the accuracy score is 0.69. This is an ok accuracy score.</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[770]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[816]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">curr_teams_df</span><span class="p">[</span><span class="s1">&#39;Squad&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">():</span>
@@ -18087,104 +18429,104 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Paris S-G -&gt; Possible Position: [2]
+<pre>Paris S-G -&gt; Possible Position: [1]
 Napoli -&gt; Possible Position: [2]
 Barcelona -&gt; Possible Position: [1]
-Arsenal -&gt; Possible Position: [1]
+Arsenal -&gt; Possible Position: [2]
 Real Madrid -&gt; Possible Position: [1]
 Lens -&gt; Possible Position: [11]
-Manchester City -&gt; Possible Position: [2]
+Manchester City -&gt; Possible Position: [1]
 Bayern Munich -&gt; Possible Position: [2]
-Milan -&gt; Possible Position: [10]
+Milan -&gt; Possible Position: [15]
 Juventus -&gt; Possible Position: [19]
-Rennes -&gt; Possible Position: [13]
+Rennes -&gt; Possible Position: [24]
 Newcastle Utd -&gt; Possible Position: [41]
-Lazio -&gt; Possible Position: [13]
-Marseille -&gt; Possible Position: [32]
-Inter -&gt; Possible Position: [12]
-Freiburg -&gt; Possible Position: [33]
-Tottenham -&gt; Possible Position: [12]
-RB Leipzig -&gt; Possible Position: [32]
-Lorient -&gt; Possible Position: [41]
+Lazio -&gt; Possible Position: [33]
+Marseille -&gt; Possible Position: [42]
+Inter -&gt; Possible Position: [22]
+Freiburg -&gt; Possible Position: [41]
+Tottenham -&gt; Possible Position: [22]
+RB Leipzig -&gt; Possible Position: [24]
+Lorient -&gt; Possible Position: [15]
 Real Sociedad -&gt; Possible Position: [21]
 Manchester Utd -&gt; Possible Position: [38]
-Monaco -&gt; Possible Position: [13]
-Eint Frankfurt -&gt; Possible Position: [32]
+Monaco -&gt; Possible Position: [15]
+Eint Frankfurt -&gt; Possible Position: [41]
 Atalanta -&gt; Possible Position: [38]
-Union Berlin -&gt; Possible Position: [19]
+Union Berlin -&gt; Possible Position: [37]
 Roma -&gt; Possible Position: [40]
-Lille -&gt; Possible Position: [32]
-Athletic Club -&gt; Possible Position: [18]
+Lille -&gt; Possible Position: [13]
+Athletic Club -&gt; Possible Position: [15]
 Atlético Madrid -&gt; Possible Position: [36]
-Betis -&gt; Possible Position: [57]
-Dortmund -&gt; Possible Position: [33]
-Osasuna -&gt; Possible Position: [65]
-Udinese -&gt; Possible Position: [19]
+Betis -&gt; Possible Position: [40]
+Dortmund -&gt; Possible Position: [42]
+Osasuna -&gt; Possible Position: [39]
+Udinese -&gt; Possible Position: [37]
 Liverpool -&gt; Possible Position: [22]
 Rayo Vallecano -&gt; Possible Position: [38]
-Wolfsburg -&gt; Possible Position: [19]
-Villarreal -&gt; Possible Position: [92]
-Brighton -&gt; Possible Position: [52]
+Wolfsburg -&gt; Possible Position: [37]
+Villarreal -&gt; Possible Position: [30]
+Brighton -&gt; Possible Position: [28]
 Chelsea -&gt; Possible Position: [21]
-M&#39;Gladbach -&gt; Possible Position: [22]
-Lyon -&gt; Possible Position: [48]
-Torino -&gt; Possible Position: [45]
-Werder Bremen -&gt; Possible Position: [42]
+M&#39;Gladbach -&gt; Possible Position: [13]
+Lyon -&gt; Possible Position: [29]
+Torino -&gt; Possible Position: [66]
+Werder Bremen -&gt; Possible Position: [41]
 Valencia -&gt; Possible Position: [29]
-Mallorca -&gt; Possible Position: [57]
+Mallorca -&gt; Possible Position: [90]
 Crystal Palace -&gt; Possible Position: [45]
-Nice -&gt; Possible Position: [73]
-Brentford -&gt; Possible Position: [52]
-Fulham -&gt; Possible Position: [53]
-Fiorentina -&gt; Possible Position: [53]
-Clermont Foot -&gt; Possible Position: [52]
-Bologna -&gt; Possible Position: [53]
-Mainz 05 -&gt; Possible Position: [53]
-Valladolid -&gt; Possible Position: [57]
-Hoffenheim -&gt; Possible Position: [61]
-Leverkusen -&gt; Possible Position: [61]
-Aston Villa -&gt; Possible Position: [58]
-Girona -&gt; Possible Position: [61]
-Almería -&gt; Possible Position: [65]
-Leicester City -&gt; Possible Position: [77]
-Salernitana -&gt; Possible Position: [61]
-Reims -&gt; Possible Position: [68]
+Nice -&gt; Possible Position: [30]
+Brentford -&gt; Possible Position: [43]
+Fulham -&gt; Possible Position: [38]
+Fiorentina -&gt; Possible Position: [62]
+Clermont Foot -&gt; Possible Position: [51]
+Bologna -&gt; Possible Position: [38]
+Mainz 05 -&gt; Possible Position: [52]
+Valladolid -&gt; Possible Position: [90]
+Hoffenheim -&gt; Possible Position: [37]
+Leverkusen -&gt; Possible Position: [42]
+Aston Villa -&gt; Possible Position: [30]
+Girona -&gt; Possible Position: [16]
+Almería -&gt; Possible Position: [60]
+Leicester City -&gt; Possible Position: [18]
+Salernitana -&gt; Possible Position: [64]
+Reims -&gt; Possible Position: [80]
 Empoli -&gt; Possible Position: [97]
-Köln -&gt; Possible Position: [61]
-Leeds United -&gt; Possible Position: [77]
-Monza -&gt; Possible Position: [75]
-Toulouse -&gt; Possible Position: [77]
-Sassuolo -&gt; Possible Position: [66]
-Bournemouth -&gt; Possible Position: [77]
-Lecce -&gt; Possible Position: [75]
-Augsburg -&gt; Possible Position: [77]
-Getafe -&gt; Possible Position: [92]
-Hertha BSC -&gt; Possible Position: [77]
-Troyes -&gt; Possible Position: [77]
-Montpellier -&gt; Possible Position: [87]
+Köln -&gt; Possible Position: [70]
+Leeds United -&gt; Possible Position: [38]
+Monza -&gt; Possible Position: [30]
+Toulouse -&gt; Possible Position: [37]
+Sassuolo -&gt; Possible Position: [84]
+Bournemouth -&gt; Possible Position: [39]
+Lecce -&gt; Possible Position: [73]
+Augsburg -&gt; Possible Position: [52]
+Getafe -&gt; Possible Position: [94]
+Hertha BSC -&gt; Possible Position: [52]
+Troyes -&gt; Possible Position: [6]
+Montpellier -&gt; Possible Position: [35]
 West Ham -&gt; Possible Position: [97]
-Everton -&gt; Possible Position: [94]
-Stuttgart -&gt; Possible Position: [77]
-Nantes -&gt; Possible Position: [74]
-Spezia -&gt; Possible Position: [73]
-Brest -&gt; Possible Position: [73]
-Auxerre -&gt; Possible Position: [87]
-Nott&#39;ham Forest -&gt; Possible Position: [97]
-Bochum -&gt; Possible Position: [93]
-Espanyol -&gt; Possible Position: [57]
-Celta Vigo -&gt; Possible Position: [93]
-Ajaccio -&gt; Possible Position: [97]
+Everton -&gt; Possible Position: [97]
+Stuttgart -&gt; Possible Position: [38]
+Nantes -&gt; Possible Position: [60]
+Spezia -&gt; Possible Position: [82]
+Brest -&gt; Possible Position: [82]
+Auxerre -&gt; Possible Position: [68]
+Nott&#39;ham Forest -&gt; Possible Position: [94]
+Bochum -&gt; Possible Position: [85]
+Espanyol -&gt; Possible Position: [50]
+Celta Vigo -&gt; Possible Position: [84]
+Ajaccio -&gt; Possible Position: [92]
 Southampton -&gt; Possible Position: [93]
-Sevilla -&gt; Possible Position: [93]
+Sevilla -&gt; Possible Position: [84]
 Cádiz -&gt; Possible Position: [97]
-Strasbourg -&gt; Possible Position: [75]
+Strasbourg -&gt; Possible Position: [60]
 Wolves -&gt; Possible Position: [97]
-Schalke 04 -&gt; Possible Position: [96]
-Angers -&gt; Possible Position: [96]
-Cremonese -&gt; Possible Position: [97]
+Schalke 04 -&gt; Possible Position: [88]
+Angers -&gt; Possible Position: [30]
+Cremonese -&gt; Possible Position: [94]
 Sampdoria -&gt; Possible Position: [97]
-Hellas Verona -&gt; Possible Position: [96]
-Elche -&gt; Possible Position: [96]
+Hellas Verona -&gt; Possible Position: [88]
+Elche -&gt; Possible Position: [90]
 </pre>
 </div>
 </div>
@@ -18193,12 +18535,20 @@ Elche -&gt; Possible Position: [96]
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>It looks like the possible winners will be Paris S-G, Barcelona,Real Madrid, or Manchester City</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[763]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[811]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
@@ -18221,122 +18571,35 @@ Elche -&gt; Possible Position: [96]
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[811]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Paris S-G -&gt; Possible Position: [2]
-Napoli -&gt; Possible Position: [2]
-Barcelona -&gt; Possible Position: [1]
-Arsenal -&gt; Possible Position: [2]
-Real Madrid -&gt; Possible Position: [2]
-Lens -&gt; Possible Position: [11]
-Manchester City -&gt; Possible Position: [2]
-Bayern Munich -&gt; Possible Position: [2]
-Milan -&gt; Possible Position: [5]
-Juventus -&gt; Possible Position: [10]
-Rennes -&gt; Possible Position: [10]
-Newcastle Utd -&gt; Possible Position: [10]
-Lazio -&gt; Possible Position: [11]
-Marseille -&gt; Possible Position: [15]
-Inter -&gt; Possible Position: [12]
-Freiburg -&gt; Possible Position: [16]
-Tottenham -&gt; Possible Position: [11]
-RB Leipzig -&gt; Possible Position: [15]
-Lorient -&gt; Possible Position: [15]
-Real Sociedad -&gt; Possible Position: [21]
-Manchester Utd -&gt; Possible Position: [16]
-Monaco -&gt; Possible Position: [13]
-Eint Frankfurt -&gt; Possible Position: [24]
-Atalanta -&gt; Possible Position: [21]
-Union Berlin -&gt; Possible Position: [18]
-Roma -&gt; Possible Position: [40]
-Lille -&gt; Possible Position: [32]
-Athletic Club -&gt; Possible Position: [18]
-Atlético Madrid -&gt; Possible Position: [26]
-Betis -&gt; Possible Position: [40]
-Dortmund -&gt; Possible Position: [33]
-Osasuna -&gt; Possible Position: [29]
-Udinese -&gt; Possible Position: [33]
-Liverpool -&gt; Possible Position: [22]
-Rayo Vallecano -&gt; Possible Position: [29]
-Wolfsburg -&gt; Possible Position: [33]
-Villarreal -&gt; Possible Position: [30]
-Brighton -&gt; Possible Position: [40]
-Chelsea -&gt; Possible Position: [40]
-M&#39;Gladbach -&gt; Possible Position: [11]
-Lyon -&gt; Possible Position: [48]
-Torino -&gt; Possible Position: [45]
-Werder Bremen -&gt; Possible Position: [42]
-Valencia -&gt; Possible Position: [51]
-Mallorca -&gt; Possible Position: [90]
-Crystal Palace -&gt; Possible Position: [45]
-Nice -&gt; Possible Position: [58]
-Brentford -&gt; Possible Position: [51]
-Fulham -&gt; Possible Position: [43]
-Fiorentina -&gt; Possible Position: [62]
-Clermont Foot -&gt; Possible Position: [52]
-Bologna -&gt; Possible Position: [53]
-Mainz 05 -&gt; Possible Position: [53]
-Valladolid -&gt; Possible Position: [73]
-Hoffenheim -&gt; Possible Position: [43]
-Leverkusen -&gt; Possible Position: [42]
-Aston Villa -&gt; Possible Position: [68]
-Girona -&gt; Possible Position: [61]
-Almería -&gt; Possible Position: [65]
-Leicester City -&gt; Possible Position: [42]
-Salernitana -&gt; Possible Position: [61]
-Reims -&gt; Possible Position: [68]
-Empoli -&gt; Possible Position: [92]
-Köln -&gt; Possible Position: [70]
-Leeds United -&gt; Possible Position: [77]
-Monza -&gt; Possible Position: [75]
-Toulouse -&gt; Possible Position: [64]
-Sassuolo -&gt; Possible Position: [66]
-Bournemouth -&gt; Possible Position: [77]
-Lecce -&gt; Possible Position: [73]
-Augsburg -&gt; Possible Position: [74]
-Getafe -&gt; Possible Position: [92]
-Hertha BSC -&gt; Possible Position: [64]
-Troyes -&gt; Possible Position: [48]
-Montpellier -&gt; Possible Position: [43]
-West Ham -&gt; Possible Position: [92]
-Everton -&gt; Possible Position: [88]
-Stuttgart -&gt; Possible Position: [74]
-Nantes -&gt; Possible Position: [74]
-Spezia -&gt; Possible Position: [82]
-Brest -&gt; Possible Position: [82]
-Auxerre -&gt; Possible Position: [90]
-Nott&#39;ham Forest -&gt; Possible Position: [94]
-Bochum -&gt; Possible Position: [93]
-Espanyol -&gt; Possible Position: [57]
-Celta Vigo -&gt; Possible Position: [93]
-Ajaccio -&gt; Possible Position: [92]
-Southampton -&gt; Possible Position: [93]
-Sevilla -&gt; Possible Position: [93]
-Cádiz -&gt; Possible Position: [94]
-Strasbourg -&gt; Possible Position: [87]
-Wolves -&gt; Possible Position: [97]
-Schalke 04 -&gt; Possible Position: [96]
-Angers -&gt; Possible Position: [96]
-Cremonese -&gt; Possible Position: [97]
-Sampdoria -&gt; Possible Position: [97]
-Hellas Verona -&gt; Possible Position: [96]
-Elche -&gt; Possible Position: [96]
-</pre>
-</div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.6938775510204082</pre>
 </div>
 
 </div>
 
 </div>
 
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Now lets try to find a winner again but this time using the random forest algorithm. This should proved a more accurate result because it will run 100 trees to find the possible winner(s).</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[773]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[818]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">curr_teams_df</span><span class="p">[</span><span class="s1">&#39;Squad&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">():</span>
@@ -18364,104 +18627,104 @@ Elche -&gt; Possible Position: [96]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Paris S-G -&gt; Possible Position: [2]
+<pre>Paris S-G -&gt; Possible Position: [1]
 Napoli -&gt; Possible Position: [2]
 Barcelona -&gt; Possible Position: [1]
-Arsenal -&gt; Possible Position: [1]
+Arsenal -&gt; Possible Position: [2]
 Real Madrid -&gt; Possible Position: [1]
 Lens -&gt; Possible Position: [11]
-Manchester City -&gt; Possible Position: [2]
+Manchester City -&gt; Possible Position: [1]
 Bayern Munich -&gt; Possible Position: [2]
-Milan -&gt; Possible Position: [10]
+Milan -&gt; Possible Position: [15]
 Juventus -&gt; Possible Position: [19]
-Rennes -&gt; Possible Position: [13]
+Rennes -&gt; Possible Position: [24]
 Newcastle Utd -&gt; Possible Position: [41]
-Lazio -&gt; Possible Position: [13]
-Marseille -&gt; Possible Position: [32]
-Inter -&gt; Possible Position: [12]
-Freiburg -&gt; Possible Position: [33]
-Tottenham -&gt; Possible Position: [12]
-RB Leipzig -&gt; Possible Position: [32]
-Lorient -&gt; Possible Position: [41]
+Lazio -&gt; Possible Position: [33]
+Marseille -&gt; Possible Position: [42]
+Inter -&gt; Possible Position: [22]
+Freiburg -&gt; Possible Position: [41]
+Tottenham -&gt; Possible Position: [22]
+RB Leipzig -&gt; Possible Position: [24]
+Lorient -&gt; Possible Position: [15]
 Real Sociedad -&gt; Possible Position: [21]
 Manchester Utd -&gt; Possible Position: [38]
-Monaco -&gt; Possible Position: [13]
-Eint Frankfurt -&gt; Possible Position: [32]
+Monaco -&gt; Possible Position: [15]
+Eint Frankfurt -&gt; Possible Position: [41]
 Atalanta -&gt; Possible Position: [38]
-Union Berlin -&gt; Possible Position: [19]
+Union Berlin -&gt; Possible Position: [37]
 Roma -&gt; Possible Position: [40]
-Lille -&gt; Possible Position: [32]
-Athletic Club -&gt; Possible Position: [18]
+Lille -&gt; Possible Position: [13]
+Athletic Club -&gt; Possible Position: [15]
 Atlético Madrid -&gt; Possible Position: [36]
-Betis -&gt; Possible Position: [57]
-Dortmund -&gt; Possible Position: [33]
-Osasuna -&gt; Possible Position: [65]
-Udinese -&gt; Possible Position: [19]
+Betis -&gt; Possible Position: [40]
+Dortmund -&gt; Possible Position: [42]
+Osasuna -&gt; Possible Position: [39]
+Udinese -&gt; Possible Position: [37]
 Liverpool -&gt; Possible Position: [22]
 Rayo Vallecano -&gt; Possible Position: [38]
-Wolfsburg -&gt; Possible Position: [19]
-Villarreal -&gt; Possible Position: [92]
-Brighton -&gt; Possible Position: [52]
+Wolfsburg -&gt; Possible Position: [37]
+Villarreal -&gt; Possible Position: [30]
+Brighton -&gt; Possible Position: [28]
 Chelsea -&gt; Possible Position: [21]
-M&#39;Gladbach -&gt; Possible Position: [22]
-Lyon -&gt; Possible Position: [48]
-Torino -&gt; Possible Position: [45]
-Werder Bremen -&gt; Possible Position: [42]
+M&#39;Gladbach -&gt; Possible Position: [13]
+Lyon -&gt; Possible Position: [29]
+Torino -&gt; Possible Position: [66]
+Werder Bremen -&gt; Possible Position: [41]
 Valencia -&gt; Possible Position: [29]
-Mallorca -&gt; Possible Position: [57]
+Mallorca -&gt; Possible Position: [90]
 Crystal Palace -&gt; Possible Position: [45]
-Nice -&gt; Possible Position: [73]
-Brentford -&gt; Possible Position: [52]
-Fulham -&gt; Possible Position: [53]
-Fiorentina -&gt; Possible Position: [53]
-Clermont Foot -&gt; Possible Position: [52]
-Bologna -&gt; Possible Position: [53]
-Mainz 05 -&gt; Possible Position: [53]
-Valladolid -&gt; Possible Position: [57]
-Hoffenheim -&gt; Possible Position: [61]
-Leverkusen -&gt; Possible Position: [61]
-Aston Villa -&gt; Possible Position: [58]
-Girona -&gt; Possible Position: [61]
-Almería -&gt; Possible Position: [65]
-Leicester City -&gt; Possible Position: [77]
-Salernitana -&gt; Possible Position: [61]
-Reims -&gt; Possible Position: [68]
+Nice -&gt; Possible Position: [30]
+Brentford -&gt; Possible Position: [43]
+Fulham -&gt; Possible Position: [38]
+Fiorentina -&gt; Possible Position: [62]
+Clermont Foot -&gt; Possible Position: [51]
+Bologna -&gt; Possible Position: [38]
+Mainz 05 -&gt; Possible Position: [52]
+Valladolid -&gt; Possible Position: [90]
+Hoffenheim -&gt; Possible Position: [37]
+Leverkusen -&gt; Possible Position: [42]
+Aston Villa -&gt; Possible Position: [30]
+Girona -&gt; Possible Position: [16]
+Almería -&gt; Possible Position: [60]
+Leicester City -&gt; Possible Position: [18]
+Salernitana -&gt; Possible Position: [64]
+Reims -&gt; Possible Position: [80]
 Empoli -&gt; Possible Position: [97]
-Köln -&gt; Possible Position: [61]
-Leeds United -&gt; Possible Position: [77]
-Monza -&gt; Possible Position: [75]
-Toulouse -&gt; Possible Position: [77]
-Sassuolo -&gt; Possible Position: [66]
-Bournemouth -&gt; Possible Position: [77]
-Lecce -&gt; Possible Position: [75]
-Augsburg -&gt; Possible Position: [77]
-Getafe -&gt; Possible Position: [92]
-Hertha BSC -&gt; Possible Position: [77]
-Troyes -&gt; Possible Position: [77]
-Montpellier -&gt; Possible Position: [87]
+Köln -&gt; Possible Position: [70]
+Leeds United -&gt; Possible Position: [38]
+Monza -&gt; Possible Position: [30]
+Toulouse -&gt; Possible Position: [37]
+Sassuolo -&gt; Possible Position: [84]
+Bournemouth -&gt; Possible Position: [39]
+Lecce -&gt; Possible Position: [73]
+Augsburg -&gt; Possible Position: [52]
+Getafe -&gt; Possible Position: [94]
+Hertha BSC -&gt; Possible Position: [52]
+Troyes -&gt; Possible Position: [6]
+Montpellier -&gt; Possible Position: [35]
 West Ham -&gt; Possible Position: [97]
-Everton -&gt; Possible Position: [94]
-Stuttgart -&gt; Possible Position: [77]
-Nantes -&gt; Possible Position: [74]
-Spezia -&gt; Possible Position: [73]
-Brest -&gt; Possible Position: [73]
-Auxerre -&gt; Possible Position: [87]
-Nott&#39;ham Forest -&gt; Possible Position: [97]
-Bochum -&gt; Possible Position: [93]
-Espanyol -&gt; Possible Position: [57]
-Celta Vigo -&gt; Possible Position: [93]
-Ajaccio -&gt; Possible Position: [97]
+Everton -&gt; Possible Position: [97]
+Stuttgart -&gt; Possible Position: [38]
+Nantes -&gt; Possible Position: [60]
+Spezia -&gt; Possible Position: [82]
+Brest -&gt; Possible Position: [82]
+Auxerre -&gt; Possible Position: [68]
+Nott&#39;ham Forest -&gt; Possible Position: [94]
+Bochum -&gt; Possible Position: [85]
+Espanyol -&gt; Possible Position: [50]
+Celta Vigo -&gt; Possible Position: [84]
+Ajaccio -&gt; Possible Position: [92]
 Southampton -&gt; Possible Position: [93]
-Sevilla -&gt; Possible Position: [93]
+Sevilla -&gt; Possible Position: [84]
 Cádiz -&gt; Possible Position: [97]
-Strasbourg -&gt; Possible Position: [75]
+Strasbourg -&gt; Possible Position: [60]
 Wolves -&gt; Possible Position: [97]
-Schalke 04 -&gt; Possible Position: [96]
-Angers -&gt; Possible Position: [96]
-Cremonese -&gt; Possible Position: [97]
+Schalke 04 -&gt; Possible Position: [88]
+Angers -&gt; Possible Position: [30]
+Cremonese -&gt; Possible Position: [94]
 Sampdoria -&gt; Possible Position: [97]
-Hellas Verona -&gt; Possible Position: [96]
-Elche -&gt; Possible Position: [96]
+Hellas Verona -&gt; Possible Position: [88]
+Elche -&gt; Possible Position: [90]
 </pre>
 </div>
 </div>
@@ -18470,22 +18733,29 @@ Elche -&gt; Possible Position: [96]
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
 <div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Based on this algorithm it looks like we kept the same result. In that Paris, Barcelona, Real Madrid, and Manchester City would be the possible winners.</p>
 
-     </div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>So in the end we manage to find the same winner for both algorithms. We begged to ask to the question how much would the results change if we added more data. Meaning adding more seasons to our dataset. However, the winner that were found are actucally believable in a real life envorinment because those teams are acutally considered the best in the world.</p>
 
+</div>
+</div>
 </div>
 </body>
 
